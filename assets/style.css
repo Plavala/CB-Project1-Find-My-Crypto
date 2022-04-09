@@ -63,7 +63,7 @@ p {
 }
 
 /*Left side content*/
-.Contacts {
+.left-feed {
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -74,16 +74,16 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     background-color: #1d440b;
 }
-.contact {
+.left-feed {
     padding-left: 20px;
     margin-bottom: 32px;
     color: #ffffff;
 }
-.contact h3 {
+.left-feed h3 {
     margin-bottom: 10px;
     text-align: center;
 }
-.contact img {
+.left-feed img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
