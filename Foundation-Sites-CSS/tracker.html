@@ -6,6 +6,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -23,15 +25,20 @@
 
 <form>
  <div class="grid-container">
-    <div class="row column grid-y grid-x"> 
-      <div class="columns cell small-4">
-        <label >Input Label
-          <input type="text" placeholder=".medium-6.cell">
+    <div class="row column grid-y grid-x align-center"> 
+      <div class="columns cell small-2">
+        <label>Coin
+          <input type="text" placeholder="Coin">
         </label>
       </div>
-      <div class="columns small-4 cell">
-        <label>Input Label
-          <input type="text" placeholder=".medium-6.cell">
+      <div class="columns cell small-2">
+        <label>Date Purchased
+          <input type="date" placeholder="Coin">
+        </label>
+      </div>
+      <div class="columns cell small-2">
+        <label>Total Investment
+          <input type="text" placeholder="Date Purchased">
         </label>
         <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p> 
       </div>
@@ -50,8 +57,8 @@
 </div>
 
 
-    
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
