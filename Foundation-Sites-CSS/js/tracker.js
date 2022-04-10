@@ -20,6 +20,10 @@ function printCoinInfo (coinName, date, number, price, investment) {
 
     let totalInvestmentTdEl = $('<td>').text(investment);
 
+    let totalInvestment = calculateTotalInvestment(price, investment);
+
+    let deleteInvestmentBtn = $('<td>').addclass('close-button').text('X');
+
 
 
 }
