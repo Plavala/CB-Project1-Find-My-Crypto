@@ -54,7 +54,7 @@
         <label>Total Investment
           <input type="text" placeholder="Date Purchased" disabled>
         </label>
-        <p><button class="button" data-open="exampleModal1">Click To Add Your Crypto!</button></p> 
+        <p><button class="button" data-open="exampleModal">Click To Add Your Crypto!</button></p> 
       </div>
     </div>
   </div>
@@ -62,35 +62,36 @@
 
 <!-- Modal Version of Form -->
 
-<div class="reveal" id="exampleModal1" data-reveal>
+<div class="reveal" id="exampleModal" data-reveal>
   <form>
     <div class="grid-container">
+      <h3>Please Enter The Information For Your Crypto Portfolio</h3>
        <div class="row column grid-y grid-x align-center"> 
-         <div class="columns cell small-2">
+         <div class="columns">
            <label>Coin
              <input type="text" placeholder="Coin">
            </label>
          </div>
-         <div class="columns cell small-2">
+         <div class="columns">
            <label>Date Purchased
              <input type="date" placeholder="Coin">
            </label>
          </div>
-         <div class="columns cell small-2">
+         <div class="columns">
            <label># of Coins
              <input type="number" placeholder="100">
            </label>
          </div>
-         <div class="columns cell small-2">
+         <div class="columns">
            <label>Purchased Price
              <input type="number" placeholder="$100">
            </label>
          </div>
-         <div class="columns cell small-2">
+         <div class="columns">
            <label>Total Investment
-             <input type="number" placeholder="Date Purchased">
+             <input type="number" placeholder="Date Purchased" disabled>
            </label>
-           <p><button class="button" data-open="exampleModal1">Click To Add Your Crypto!</button></p> 
+           <p><button class="button" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p> 
          </div>
        </div>
      </div>
