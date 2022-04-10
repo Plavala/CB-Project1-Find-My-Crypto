@@ -10,6 +10,16 @@ function printCoinInfo (coinName, date, number, price, investment) {
 
     let portfolioRowElement = $('<tr>');
 
-    let coinNameTdEl = 
+    let coinNameTdEl = = $('<td>').text(coinName);
+
+    let coinDateTdEl = $('<td>').text(date);
+
+    let coinNumberTdEl = $('<td>').text(number);
+
+    let coinPriceTdEl = $('<td>').text(price);
+
+    let totalInvestmentTdEl = $('<td>').text(investment);
+
+
 
 }
