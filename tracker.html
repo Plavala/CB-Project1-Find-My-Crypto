@@ -73,11 +73,11 @@
                     <tbody>
                         <div id="portfolio-row-input"></div>
                         <tr>
-                            <td id="coin-name">Coin Content Goes Here</td>
-                            <td id="coin-date">Date Content Goes Here</td>
-                            <td id="coin-number">Number of Coins Goes Here</td>
-                            <td id="coin-price">Purchase Price Goes Here</td>
-                            <td id="coin-investment">Total Investment Goes Here</td>
+                            <td>Coin Content Goes Here</td>
+                            <td>Date Content Goes Here</td>
+                            <td>Number of Coins Goes Here</td>
+                            <td>Purchase Price Goes Here</td>
+                            <td>Total Investment Goes Here</td>
                         </tr>
                     </tbody>
                 </table>
@@ -93,27 +93,27 @@
                 <div class="row column grid-y grid-x align-center">
                     <div class="columns">
                         <label>Coin
-                            <select><option></option></select>
+                            <select id="coin-list"><option value=""></option></select>
                         </label>
                     </div>
                     <div class="columns">
                         <label>Date Purchased
-                            <input type="date" placeholder="Coin">
+                            <input id="coin-date" type="date" placeholder="Coin">
                         </label>
                     </div>
                     <div class="columns">
                         <label># of Coins
-                            <input type="number" placeholder="100">
+                            <input id="coin-number" type="number" placeholder="100">
                         </label>
                     </div>
                     <div class="columns">
                         <label>Purchased Price
-                            <input type="number" placeholder="$100">
+                            <input id="coin-price" type="number" placeholder="$100">
                         </label>
                     </div>
                     <div class="columns">
                         <label>Total Investment
-                            <input type="number" placeholder="Date Purchased" disabled>
+                            <input id="coin-investment" type="number" placeholder="Date Purchased" disabled>
                         </label>
                         <p><button id="inital-btn" class="button" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
                     </div>

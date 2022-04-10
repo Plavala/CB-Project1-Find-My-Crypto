@@ -1,8 +1,3 @@
-/* <td id="coin-name">Coin Content Goes Here</td>
-<td id="coin-date">Date Content Goes Here</td>
-<td id="coin-number">Number of Coins Goes Here</td>
-<td id="coin-price">Purchase Price Goes Here</td>
-<td id="coin-investment">Total Investment Goes Here</td> */
 // DOM Elements 
 
 let portfolioDisplay = $('#portfolio-row-input');
@@ -53,5 +48,11 @@ function calculateTotalInvestment (price, investment){
     let total = price * investment;
     return total;
 }
+
+// curl -X 'GET' \
+//   'https://api.coingecko.com/api/v3/coins/list' \
+//   -H 'accept: application/json'
+
+// https://api.coingecko.com/api/v3/coins/list
 
 formEl
