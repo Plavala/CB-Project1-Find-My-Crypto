@@ -87,7 +87,7 @@
 
     <!-- Modal Version of Form -->
     <div class="reveal" id="exampleModal" data-reveal>
-        <form>
+        <form id="portfolio-form">
             <div class="grid-container">
                 <h3>Please Enter The Information For Your Crypto Portfolio</h3>
                 <div class="row column grid-y grid-x align-center">
@@ -115,7 +115,7 @@
                         <label>Total Investment
                             <input type="number" placeholder="Date Purchased" disabled>
                         </label>
-                        <p><button class="button" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
+                        <p><button id="inital-btn" class="button" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
         $(document).foundation();
 
         function opener(event) {
-            event.preventDefault();
+        event.preventDefault();
         }
     </script>
 </body>
