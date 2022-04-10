@@ -10,7 +10,7 @@ function printCoinInfo (coinName, date, number, price, investment) {
 
     let portfolioRowElement = $('<tr>');
 
-    let coinNameTdEl = = $('<td>').text(coinName);
+    let coinNameTdEl =  $('<td>').text(coinName);
 
     let coinDateTdEl = $('<td>').text(date);
 
@@ -23,6 +23,15 @@ function printCoinInfo (coinName, date, number, price, investment) {
     let totalInvestment = calculateTotalInvestment(price, investment);
 
     let deleteInvestmentBtn = $('<td>').addclass('close-button').text('X');
+
+    portfolioRowElement.append(
+        coinNameTdEl, 
+        coinDateTdEl, 
+        coinNumberTdEl,
+        coinPriceTdEl,
+        totalInvestment,
+        deleteInvestmentBtn
+        );
 
 
 
