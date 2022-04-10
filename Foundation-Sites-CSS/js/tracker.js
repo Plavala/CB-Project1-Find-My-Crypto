@@ -9,4 +9,7 @@ let coinNameDisplay = $('#coin-name');
 function printCoinInfo (coinName, date, number, price, investment) {
 
     let portfolioRowElement = $('<tr>');
+
+    let coinNameTdEl = 
+
 }
