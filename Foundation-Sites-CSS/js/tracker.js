@@ -4,11 +4,14 @@
 <td id="coin-price">Purchase Price Goes Here</td>
 <td id="coin-investment">Total Investment Goes Here</td> */
 
+let portfolioDisplay = $('#portfolio-row-input');
+let modalEl = $('#exampleModal');
+
 let coinNameDisplay = $('#coin-name');
 
 function printCoinInfo (coinName, date, number, price, investment) {
 
-    let portfolioRowElement = $('<tr>');
+    let portfolioRowEl = $('<tr>');
 
     let coinNameTdEl =  $('<td>').text(coinName);
 
@@ -31,8 +34,10 @@ function printCoinInfo (coinName, date, number, price, investment) {
         coinPriceTdEl,
         totalInvestment,
         deleteInvestmentBtn
-        );
+    );
 
-
+    portfolioDisplay.append(portfolioRowEl);
+    modalEl.removeClass('reveal');
+    modalEl.addclass('hide');
 
 }
