@@ -3,6 +3,7 @@
 let portfolioDisplay = $('#portfolio-row-input');
 let modalEl = $('#exampleModal');
 let formEl = $('portfolio-form');
+let formSubmitEl = $('crypto-submit');
 let coinNameDisplay = $('#coin-name');
 
 
@@ -48,6 +49,13 @@ function calculateTotalInvestment (price, investment){
     let total = price * investment;
     return total;
 }
+
+function handleDeleteProject(event) {
+  console.log(event.target);
+  var btnClicked = $(event.target);
+  btnClicked.parent('tr').remove();
+}
+
 
 // curl -X 'GET' \
 //   'https://api.coingecko.com/api/v3/coins/list' \
