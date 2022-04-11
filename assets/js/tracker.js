@@ -4,10 +4,14 @@ let portfolioDisplay = $('#portfolio-row-input');
 let modalEl = $('#exampleModal');
 let formEl = $('portfolio-form');
 let formSubmitEl = $('crypto-submit');
-let coinNameDisplay = $('#coin-name');
+let coinNameInputEl = $('#coin-list');
+let coinDateInputEl = $('#coin-date');
+let coinNumberInputEl = $('#coin-number');
+let coinPriceInputEl = $('#coin-price');
+let coinInvestmentOutputEl = $('#coin-investment');
 
 
-function printCoinInfo (coinName, date, number, price, investment) {
+function printCoinInfo (coinName, date, number, price) {
 
     let portfolioRowEl = $('<tr>');
 
@@ -17,11 +21,11 @@ function printCoinInfo (coinName, date, number, price, investment) {
 
     let coinNumberTdEl = $('<td>').text(number);
 
-    let coinPriceTdEl = $('<td>').text(price);
+    let coinPriceTdEl = $('<td>').text('$' + price);
 
-    let totalInvestmentTdEl = $('<td>').text(investment);
+    let totalInvestment = calculateTotalInvestment(price, number);
 
-    let totalInvestment = calculateTotalInvestment(price, investment);
+    var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
     let deleteInvestmentBtn = $('<td>').addclass('close-button').text('X');
 
@@ -39,8 +43,8 @@ function printCoinInfo (coinName, date, number, price, investment) {
     modalEl.addclass('hide');
 }
 
-function calculateTotalInvestment (price, investment){
-    let total = price * investment;
+function calculateTotalInvestment (price, number){
+    let total = price * number;
     return total;
 }
 
@@ -50,6 +54,19 @@ function handleDeleteCoin(event) {
   btnClicked.parent('tr').remove();
 }
 
+function handlePortfolioFormSubmit(event) {
+    event.preventDefault();
+  
+    let coinName = coinNameInputEl.val().trim();
+    var coinDate = coinDateInputEl.val();
+    let  coinPrice = coinNumberInputEl.val().trim();
+    let dueDate = dueDateInputEl.val().trim();
+  
+    printProjectData(projectName, projectType, hourlyRate, dueDate);
+  
+    projectFormEl[0].reset();
+  }
+  
 
 // curl -X 'GET' \
 //   'https://api.coingecko.com/api/v3/coins/list' 
