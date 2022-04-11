@@ -13,12 +13,6 @@ function printCoinInfo (coinName, date, number, price, investment) {
 
     let coinNameTdEl =  $('<td>').text(coinName);
 
-    fetch(apiUrl)
-    .then(function (response) {
-      if (response.ok) {
-        response.json().then(function (data) {
-        });
-
     let coinDateTdEl = $('<td>').text(date);
 
     let coinNumberTdEl = $('<td>').text(number);
@@ -50,7 +44,7 @@ function calculateTotalInvestment (price, investment){
     return total;
 }
 
-function handleDeleteProject(event) {
+function handleDeleteCoin(event) {
   console.log(event.target);
   var btnClicked = $(event.target);
   btnClicked.parent('tr').remove();
@@ -58,9 +52,7 @@ function handleDeleteProject(event) {
 
 
 // curl -X 'GET' \
-//   'https://api.coingecko.com/api/v3/coins/list' \
+//   'https://api.coingecko.com/api/v3/coins/list' 
 //   -H 'accept: application/json'
 
 // https://api.coingecko.com/api/v3/coins/list
-
-formEl
