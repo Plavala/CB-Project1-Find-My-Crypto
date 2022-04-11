@@ -60,11 +60,11 @@ function handlePortfolioFormSubmit(event) {
     let coinName = coinNameInputEl.val().trim();
     var coinDate = coinDateInputEl.val();
     let  coinPrice = coinNumberInputEl.val().trim();
-    let dueDate = dueDateInputEl.val().trim();
+    let coinNumber = coinNumberInputEl.val().trim();
   
-    printProjectData(projectName, projectType, hourlyRate, dueDate);
+    printProjectData(coinName, coinDate, coinPrice, coinNumber);
   
-    projectFormEl[0].reset();
+    formEl[0].reset();
   }
   
 
