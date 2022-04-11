@@ -66,6 +66,8 @@ function handlePortfolioFormSubmit(event) {
   
     formEl[0].reset();
   }
+
+  formEl.on()
   
 
 // curl -X 'GET' \
