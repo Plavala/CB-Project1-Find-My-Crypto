@@ -51,9 +51,9 @@
                     </div>
                     <div class="columns cell small-2">
                         <label>Total Investment
-                            <input type="text" placeholder="Date Purchased" disabled>
+                            <input type="number" placeholder="Total Investment" disabled>
                         </label>
-                        <p><button class="button" data-open="exampleModal" onclick="opener(event)">Click To Add Your
+                        <p><button class="button" data-open="exampleModal" id="modal-opener">Click To Add Your
                                 Crypto!</button></p>
                     </div>
                 </form>
@@ -63,21 +63,23 @@
                 <table>
                     <thead>
                         <tr>
-                            <th width="100">Coin</th>
-                            <th width="100">Date Purchased</th>
-                            <th width="100"># Of Coins</th>
-                            <th width="100">Purchased Price</th>
-                            <th width="100">Total Investment</th>
+                            <th width="50">Coin</th>
+                            <th width="50">Date Purchased</th>
+                            <th width="50"># Of Coins</th>
+                            <th width="50">Purchased Price</th>
+                            <th width="50">Total Investment</th>
+                            <th width="50">Remove</th>
                         </tr>
                     </thead>
                     <tbody>
                         <div id="portfolio-row-input"></div>
                         <tr>
-                            <td>Coin Content Goes Here</td>
-                            <td>Date Content Goes Here</td>
-                            <td>Number of Coins Goes Here</td>
-                            <td>Purchase Price Goes Here</td>
-                            <td>Total Investment Goes Here</td>
+                            <td class="coin-name-input">Coin Content Goes Here</td>
+                            <td class="coin-date-input">Date Content Goes Here</td>
+                            <td class="coin-number-input">Number of Coins Goes Here</td>
+                            <td class="coin-price-input">Purchase Price Goes Here</td>
+                            <td class="coin-investment-input">Total Investment Goes Here</td>
+                            <td class="delete-investment">X</td>
                         </tr>
                     </tbody>
                 </table>
@@ -113,28 +115,30 @@
                     </div>
                     <div class="columns">
                         <label>Total Investment
-                            <input id="coin-investment" type="number" placeholder="Date Purchased" disabled>
-                        </label><button id="crypto-submit" class="button" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
+                            <input id="coin-investment" type="number" placeholder="Total Investment" disabled>
+                        </label><button id="crypto-submit" class="button" type="submit" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
                     </div>
                 </div>
             </div>
         </form>
-        <button class="close-button" data-close aria-label="Close modal" type="submit">
+        <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"         
         crossorigin="anonymous"></script>
-    <script src="./assets/js/tracker.js"></script>
-    <script>
+    <!-- <script>
         $(document).foundation();
 
         function opener(event) {
         event.preventDefault();
         }
-    </script>
+    </script> -->
+    <script src="./assets/js/tracker.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,24 @@
 // DOM Elements 
 
+let modalOpenerEl = $('#modal-opener')
 let portfolioDisplay = $('#portfolio-row-input');
 let modalEl = $('#exampleModal');
-let formEl = $('portfolio-form');
-let formSubmitEl = $('crypto-submit');
+let portfolioFormEl = $('#portfolio-form');
+let formSubmitEl = $('#crypto-submit');
 let coinNameInputEl = $('#coin-list');
 let coinDateInputEl = $('#coin-date');
 let coinNumberInputEl = $('#coin-number');
 let coinPriceInputEl = $('#coin-price');
 let coinInvestmentOutputEl = $('#coin-investment');
+
+$ (document).foundation();
+
+
+function openModal(event){
+    event.preventDefault();
+}
+
+modalOpenerEl.on('click', openModal);
 
 
 function printCoinInfo (coinName, date, number, price) {
@@ -17,34 +27,39 @@ function printCoinInfo (coinName, date, number, price) {
 
     let coinNameTdEl =  $('<td>').text(coinName);
 
+    $( ".coin-name-input" ).prepend( `<p>${coinName}</p>` );
+
     let coinDateTdEl = $('<td>').text(date);
+
+    $( ".coin-date-input" ).prepend( `<p>${date}</p>` );
 
     let coinNumberTdEl = $('<td>').text(number);
 
     let coinPriceTdEl = $('<td>').text('$' + price);
 
-    let totalInvestment = calculateTotalInvestment(price, number);
+    let totalInvestment = calculateTotalInvestment(number, price);
 
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
-    let deleteInvestmentBtn = $('<td>').addclass('close-button').text('X');
+    let deleteInvestmentBtn = $('<td>').addClass('close-button').text('X');
 
-    portfolioRowElement.append(
+
+
+    portfolioRowEl.append(
         coinNameTdEl, 
         coinDateTdEl, 
         coinNumberTdEl,
         coinPriceTdEl,
-        totalInvestment,
+        totalInvestmentTdEl,
         deleteInvestmentBtn
     );
 
     portfolioDisplay.append(portfolioRowEl);
-    modalEl.removeClass('reveal');
-    modalEl.addclass('hide');
+    modalEl.removeData();
 }
 
-function calculateTotalInvestment (price, number){
-    let total = price * number;
+function calculateTotalInvestment (number, price){
+    let total = number * price;
     return total;
 }
 
@@ -57,21 +72,29 @@ function handleDeleteCoin(event) {
 function handlePortfolioFormSubmit(event) {
     event.preventDefault();
   
-    let coinName = coinNameInputEl.val().trim();
-    var coinDate = coinDateInputEl.val();
-    let  coinPrice = coinNumberInputEl.val().trim();
+    let coinName = coinNameInputEl.val();
+    let coinDate = coinDateInputEl.val();
+    let coinPrice = coinNumberInputEl.val().trim();
     let coinNumber = coinNumberInputEl.val().trim();
   
-    printProjectData(coinName, coinDate, coinPrice, coinNumber);
+    printCoinInfo(coinName, coinDate, coinNumber, coinPrice);
   
-    formEl[0].reset();
+    portfolioFormEl[0].reset();
   }
 
-  formEl.on()
-  
+    formSubmitEl.on('click', handlePortfolioFormSubmit);
+    portfolioDisplay.on('click', '.close-button', handleDeleteCoin);
+
 
 // curl -X 'GET' \
 //   'https://api.coingecko.com/api/v3/coins/list' 
 //   -H 'accept: application/json'
 
 // https://api.coingecko.com/api/v3/coins/list
+
+// $(document).ready(function() {
+//     $("#crypto-submit").on('click', function(event) {
+//         alert("Submit button is clicked!");
+//         event.preventDefault();
+//     });
+// });
