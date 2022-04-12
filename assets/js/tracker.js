@@ -35,13 +35,21 @@ function printCoinInfo (coinName, date, number, price) {
 
     let coinNumberTdEl = $('<td>').text(number);
 
+    $( ".coin-number-input" ).prepend( `<p>${number}</p>` );
+
     let coinPriceTdEl = $('<td>').text('$' + price);
+
+    $( ".coin-price-input" ).prepend( `<p>${price}</p>` );
 
     let totalInvestment = calculateTotalInvestment(number, price);
 
+    $( ".coin-investment-input" ).prepend( `<p>$${totalInvestment}</p>` );
+
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
-    let deleteInvestmentBtn = $('<td>').addClass('close-button').text('X');
+    // let deleteInvestmentBtn = $('<td>').addClass('close-button').text('X');
+
+    $( ".delete-investment" ).prepend( '<button class="close-button">Remove</button>' );
 
 
 
@@ -54,7 +62,7 @@ function printCoinInfo (coinName, date, number, price) {
         deleteInvestmentBtn
     );
 
-    portfolioDisplay.append(portfolioRowEl);
+    // portfolioDisplay.append(portfolioRowEl);
     modalEl.removeData();
 }
 
