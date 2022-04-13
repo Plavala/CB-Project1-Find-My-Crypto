@@ -1,4 +1,7 @@
 var cryptoFeed = document.querySelector('.left-feed')
+var topCrypto = document.querySelector('.crypto-card')
+var cryptoImg = document.querySelector('.market-image')
+
 
 
 function getNewsFeed(){
@@ -25,25 +28,36 @@ function getExchangeFeed() {
       })
 
       .then(function(data) {
-
-        console.log(data)
-          
-          for(var i = 0; i < 10; i++){
-
-            console.log(data.data.rates)
-              var card = document.createElement('div')
-              card.classList = 'crypto-exchange'
-              var ID = document.createElement('h4')
-              var name = document.createELement('h4')
-              var symbol = document.createELement('h4')
-              var date = document.createElement('p')
-              var currentPrice = document.createElement('p')
-              var image = document.createElement('img')
-              image.className = 'coin-images'
-              ID.
-              
-          }
-     })
+        for(var i = 0; i < 5; i++) {
+          console.log(data[i])
+          var cardsContainer = document.querySelector('.crypto-market');  
+          var marketCard = document.querySelector('.market-card')
+          var cardDiv = document.createElement('div')
+          var cardsCell = document.createElement('div')
+          cardsContainer.append(cardDiv)
+          cardsCell.classList = 'card-cell cell'
+          marketCard.append(cardsCell) 
+          var card = document.createElement('div');
+          card.classList = "cryptoCard card";
+          cardsCell.appendChild(card);
+            var name = document.createElement('p');
+            var date = document.createElement('p');
+            var currentPrice = data[i].current_price;
+            name.textContent = data[i].name + '\n'+ currentPrice;
+            var priceChange = data[i].price_change_24h;
+            var pricePercentageChange = data[i].price_change_percentage_24h;
+            var prices = document.createElement('p')
+            prices.textContent = '$'+ priceChange + '\n' + '%'+ pricePercentageChange
+            var img = document.createElement('img')
+            var imgUrl = data[i].image
+            img.setAttribute('src', imgUrl)
+            date.textContent= data[i].last_updated;
+            card.append(img)
+            card.append(name);
+            card.append(prices)
+            card.append(date);
+        }
+        })
 
 }
 

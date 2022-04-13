@@ -3,19 +3,37 @@
 
 <head>
     <meta charset="UTF-8" />
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets\style.css">
     <title> FindMyCrypto</title>
 </head>
 <!--please work-->
 <!-- header -->
 <body>
-    <div class="header">
+    <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">FindMyCrypto</li>
+            <li><a href="#">About Crypto</a></li>
+            <li><a href="#">Crypto Calculator</a></li>
+            <li><a href="#">Find Crypto</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+    <!-- <header class="header">
         <h1>Find My <span class="cry">Cry</span>pto</h1>
         <div>
             <ul>
                 <nav>
-                    <!--the links-->
-                    <li>
+                    the links-->
+                    <!-- <li>
                         <a href="#About-crypto">About Crypto</a>
                     </li>
                     <li>
@@ -27,54 +45,13 @@
                 </nav>
             </ul>
         </div>
-    </div>
-    <div class="Prof"> 
-        <img src="assets\images\cryptocurrency.jpg" alt="Crypto background">
-    </div>
-    <div class="information-container">
-
-        <!--site left side Crypto feed-->
-        <div class="left-feed">
-            <div id="left-feed">
-                <h3>Crypto feed</h3>
-                
-                
-            </div>
-
-        </div>
-        <!--The link content-->
-        <div class="info">
-            <div id="About-crypto" class="info-content">
-                <img src="assets\images\cryptocurrency-concept-background.webp" alt="A very nice pic of me" class="float-left" />
-                <h2>About crypto</h2>
-                <p>
-                    
-                </p>
-            </div>
-            <div id="Crypto-calculator" class="info-content">
-                <img src="assets\images\crypto-exchange.jpg" alt="code refactor example" class="float-right" />
-                <h2>Crypto calculator</h2>
-                <p>
-                   
-                </p>
-            </div>
-            <div id="Find-crypto" class="info-content">
-                <img src="assets\images\97-060-ARGO-PRO-8888-Private-Equity-Blog-From-Scott-Kelly-Content-Hub-Image-1200x675-resized-1024x576.jpg" alt="Github banner" class="float-left" />
-                <h2>Find crypto</h2>
-                <p>
-                    
-                </p>
-            </div>
-        </div>
+    </header> -->
+    
+    <div class="grid-container crypto-market">
+      <div class = 'market-card grid-x grid-margin-x small-up-2 medium-up-5'></div>
     </div>
 
-    <!--Footer site credits and copy right -->
-    <div class="footer">
-        <h2>Made with VScode by Microsoft</h2>
-        <p>
-            &copy; Georgia tech coding bootcamp
-        </p>
-    </div>
+    
 
     <script src="./index.js"></script>
 </body>
