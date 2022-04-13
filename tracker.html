@@ -15,7 +15,7 @@
     
     <!-- Top of the page -->
     <header class="subnav-hero-section">
-        <h1 class="subnav-hero-headline">My Crypto Tracker</h1>
+        <h1 class="subnav-hero-headline"><a href="tracker">My Crypto Tracker</a></h1>
         <ul class="subnav-hero-subnav">
             <li><a href="#">Home</a></li>
             <li><a href="#" class="is-active">Crypto Calculator</a></li>
@@ -53,7 +53,7 @@
                         <label>Total Investment
                             <input type="number" placeholder="Total Investment" disabled>
                         </label>
-                        <p><button class="button" data-open="exampleModal" id="modal-opener">Click To Add Your
+                        <p><button class="button" data-open="example-modal" id="modal-opener">Click To Add Your
                                 Crypto!</button></p>
                     </div>
                 </form>
@@ -74,12 +74,12 @@
                     <tbody>
                         <div id="portfolio-row-input"></div>
                         <tr>
-                            <td class="coin-name-input">Coin Content Goes Here</td>
-                            <td class="coin-date-input">Date Content Goes Here</td>
-                            <td class="coin-number-input">Number of Coins Goes Here</td>
-                            <td class="coin-price-input">Purchase Price Goes Here</td>
-                            <td class="coin-investment-input">Total Investment Goes Here</td>
-                            <td class="delete-investment"><p><button class="close-button">Remove</button></td></p>
+                            <td class="coin-name-input"></td>
+                            <td class="coin-date-input"></td>
+                            <td class="coin-number-input"></td>
+                            <td class="coin-price-input"></td>
+                            <td class="coin-investment-input"></td>
+                            <td class="delete-investment"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -88,14 +88,14 @@
     </div>
 
     <!-- Modal Version of Form -->
-    <div class="reveal" id="exampleModal" data-reveal>
+    <div class="reveal" id="example-modal" data-reveal>
         <form id="portfolio-form">
             <div class="grid-container">
                 <h3>Please Enter The Information For Your Crypto Portfolio</h3>
                 <div class="row column grid-y grid-x align-center">
                     <div class="columns">
                         <label>Coin
-                            <select id="coin-list"><option value=""></option></select>
+                            <select id="coin-list"><option id="coin-value" value="coin"></option></select>
                         </label>
                     </div>
                     <div class="columns">
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </form>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button id ='close-modal' class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
@@ -131,13 +131,6 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"         
         crossorigin="anonymous"></script>
-    <!-- <script>
-        $(document).foundation();
-
-        function opener(event) {
-        event.preventDefault();
-        }
-    </script> -->
     <script src="./assets/js/tracker.js"></script>
 </body>
 
