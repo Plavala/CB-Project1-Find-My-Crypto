@@ -2,7 +2,8 @@
 
 .subnav-hero-section {
   text-align: center;
-  background: #1779ba;
+  /* background: #1779ba; */
+  background-image: url('./images/bitcoin-image.jpeg');
   background-size: cover;
   position: relative;
   overflow: visible;
