@@ -36,19 +36,19 @@ function printCoinInfo (name, date, number, price) {
 
     let coinDateTdEl = $('<td>').text(date);
 
-    $( ".coin-date-input" ).prepend( `<p>${date}</p>` );
+    // $( ".coin-date-input" ).prepend( `<p>${date}</p>` );
 
     let coinNumberTdEl = $('<td>').text(number);
 
-    $( ".coin-number-input" ).prepend( `<p>${number}</p>` );
+    // $( ".coin-number-input" ).prepend( `<p>${number}</p>` );
 
     let coinPriceTdEl = $('<td>').text('$' + price);
 
-    $( ".coin-price-input" ).prepend( `<p>${price}</p>` );
+    // $( ".coin-price-input" ).prepend( `<p>${price}</p>` );
 
     let totalInvestment = calculateTotalInvestment(number, price);
 
-    $( ".coin-investment-input" ).prepend( `<p>$${totalInvestment}</p>` );
+    // $( ".coin-investment-input" ).prepend( `<p>$${totalInvestment}</p>` );
 
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
@@ -56,15 +56,14 @@ function printCoinInfo (name, date, number, price) {
 
     // $('button').addClass('close-button');
 
-    $( ".delete-investment" ).prepend(deleteInvestmentBtn);
-    debugger
+    // $( ".delete-investment" ).prepend(deleteInvestmentBtn);
     // let removeBtn = document.createElement('input');
     // removeBtn.type = 'button';
     // removeBtn.className = 'close-button';
     // btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
     // deleteInvestmentBtn.prepend(removeBtn);
 
-
+    portfolioDisplay.append(portfolioRowEl);
 
     portfolioRowEl.append(
         // coinNameTdEl, 
@@ -102,7 +101,6 @@ function handleDeleteCoin(event) {
 
 function handlePortfolioFormSubmit(event) {
     event.preventDefault();
-    debugger
     let coinName = coinNameInputEl.val();
     console.log();
     let coinDate = coinDateInputEl.val();
@@ -123,7 +121,7 @@ function handlePortfolioFormSubmit(event) {
 
     function getApi() {
 
-        var requestUrl = 'https://api.coingecko.com/api/v3/coins/list';
+        var requestUrl = 'https://cors-anywhere.herokuapp.com/https://api.coingecko.com/api/v3/coins/list';
       
         fetch(requestUrl)
           .then(function (response) {
