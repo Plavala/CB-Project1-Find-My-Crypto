@@ -6,7 +6,7 @@ let modalEl = $('#example-modal');
 let portfolioFormEl = $('#portfolio-form');
 let formSubmitEl = $('#crypto-submit');
 let coinNameInputEl = $('#coin-list');
-let selectedCoinEl = $('coin-value');
+let selectedCoinEl = $('#coin-value');
 let coinDateInputEl = $('#coin-date');
 let coinNumberInputEl = $('#coin-number');
 let coinPriceInputEl = $('#coin-price');
@@ -26,8 +26,6 @@ modalOpenerEl.on('click', openModal);
 function printCoinInfo (name, date, number, price) {
 
     let portfolioRowEl = $('<tr>');
-
-    // getApi();
 
     // let coinName = data[i].name.val();
     // console.log(coinName);
@@ -54,16 +52,16 @@ function printCoinInfo (name, date, number, price) {
 
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
-    let deleteInvestmentBtn = $('<td>').text('X');
+    let deleteInvestmentBtn = $('<button>').text('X');
 
     // $('button').addClass('close-button');
 
     $( ".delete-investment" ).prepend(deleteInvestmentBtn);
-
+    debugger
     // let removeBtn = document.createElement('input');
     // removeBtn.type = 'button';
     // removeBtn.className = 'close-button';
-    // // btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
+    // btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
     // deleteInvestmentBtn.prepend(removeBtn);
 
 
@@ -74,15 +72,15 @@ function printCoinInfo (name, date, number, price) {
         coinNumberTdEl,
         coinPriceTdEl,
         totalInvestmentTdEl,
-        deleteInvestmentBtn
+     
     );
 
     // portfolioDisplay.append(portfolioRowEl);
     // modalEl.removeAttr('data-reveal');
 
-    $('#crypto-submit').on('click', function () {
-         $(modalEl).foundation('reveal', 'close');
-    })
+    // $('#crypto-submit').on('click', function () {
+    //      $(modalEl).foundation('reveal', 'close');
+    // })
 }
 
 // function closeModal(){
@@ -104,8 +102,8 @@ function handleDeleteCoin(event) {
 
 function handlePortfolioFormSubmit(event) {
     event.preventDefault();
-  
-    let coinName = selectedCoinEl.val();
+    debugger
+    let coinName = coinNameInputEl.val();
     console.log();
     let coinDate = coinDateInputEl.val();
     let coinPrice = coinNumberInputEl.val().trim();
