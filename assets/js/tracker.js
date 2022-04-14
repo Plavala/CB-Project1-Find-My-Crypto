@@ -14,9 +14,8 @@ let coinPriceInputEl = $('#coin-price');
 let coinInvestmentOutputEl = $('#coin-investment');
 let closeModalEl = $('#close-modal');
 
-
+// Prevents default behavior on the main form 
 $ (document).foundation();
-
 
 function openModal(event){
     event.preventDefault();
@@ -24,6 +23,7 @@ function openModal(event){
 
 modalOpenerEl.on('click', openModal);
 
+//Dynamically create coin info
 
 function printCoinInfo (name, date, number, price) {
 
@@ -62,22 +62,26 @@ function printCoinInfo (name, date, number, price) {
     
 }
 
+//Calculates the total investment
 function calculateTotalInvestment (number, price){
     let total = number * price;
     return total;
 }
 
+//Delete button fuction for each row
 function handleDeleteCoin(event) {
   var btnClicked = $(event.target);
   btnClicked.parent('tr').remove();
 }
 
+//Form Submitter & Set LocalStorage
 function handlePortfolioFormSubmit(event) {
     event.preventDefault();
     let coinName = coinNameInputEl.val().trim();
     let coinDate = coinDateInputEl.val();
-    let coinPrice = coinNumberInputEl.val().trim();
-    let coinNumber = coinNumberInputEl.val().trim();
+    let coinPrice = coinPriceInputEl.val();
+    typeof(coinPrice);
+    let coinNumber = coinNumberInputEl.val();
   
     printCoinInfo(coinName, coinDate, coinNumber, coinPrice);
 
@@ -94,31 +98,31 @@ function handlePortfolioFormSubmit(event) {
     portfolioFormEl[0].reset();
 }
 
+// Event Listeners
     formSubmitEl.on('click', handlePortfolioFormSubmit);
     portfolioDisplay.on('click', '.delete-coin-btn', handleDeleteCoin);
 
 
 
+//API call
+    function getApi() {
 
-    // function getApi() {
-
-    //     var requestUrl = 'https://cors-anywhere.herokuapp.com/https://api.coingecko.com/api/v3/coins/list';
+        var requestUrl = 'https://api.coingecko.com/api/v3/coins/list';
       
-    //     fetch(requestUrl)
-    //       .then(function (response) {
-    //         return response.json();
-    //       })
-    //       .then(function (data) {
-    //         console.log(data);
-    //         console.log(data[0].name);
-    //         for(let i = 0; i < data.length; i++) {
-    //             let coinOptions = document.createElement("option");
-    //                 coinOptions.value = data[i].name;
-    //                 coinOptions.innerHTML = data[i].name;
-    //                 coinNameInputEl.append(coinOptions);}
-    //       })
-    // }
+        fetch(requestUrl)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+            for(let i = 0; i < data.length; i++) {
+                let coinOptions = document.createElement("option");
+                    coinOptions.value = data[i].name;
+                    coinOptions.innerHTML = data[i].name;
+                    coinNameInputEl.append(coinOptions);}
+          })
+    }
 
-    // getApi();
+    getApi();
     
 
