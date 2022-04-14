@@ -80,6 +80,16 @@ function handlePortfolioFormSubmit(event) {
     let coinNumber = coinNumberInputEl.val().trim();
   
     printCoinInfo(coinName, coinDate, coinNumber, coinPrice);
+
+    let data = {
+      name: coinName,
+      date: coinDate,
+      price: coinPrice,
+      number: coinNumber
+    };
+
+    localStorage.setItem('coin-info', JSON.stringify(data));
+
   
     portfolioFormEl[0].reset();
 }
