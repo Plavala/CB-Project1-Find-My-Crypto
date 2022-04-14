@@ -1,6 +1,7 @@
 // DOM Elements 
 
-let modalOpenerEl = $('#modal-opener')
+let rootElement = $(document.documentElement);
+let modalOpenerEl = $('#modal-opener');
 let portfolioDisplay = $('#portfolio-row-input');
 let modalEl = $('#example-modal');
 let portfolioFormEl = $('#portfolio-form');
@@ -12,6 +13,7 @@ let coinNumberInputEl = $('#coin-number');
 let coinPriceInputEl = $('#coin-price');
 let coinInvestmentOutputEl = $('#coin-investment');
 let closeModalEl = $('#close-modal');
+
 
 $ (document).foundation();
 
@@ -51,14 +53,11 @@ function printCoinInfo (name, date, number, price) {
         totalInvestmentTdEl,
         deleteInvestmentBtn
     );
-
-
-    // portfolioDisplay.append(portfolioRowEl);
-    // modalEl.removeAttr('data-reveal');
-
-    // $('#crypto-submit').on('click', function () {
-    //      $(modalEl).foundation('reveal', 'close');
-    // })
+    
+    let revealEL = $('.reveal-overlay');
+    modalEl.css('display', 'none');
+    revealEL.css('display', 'none');
+    
 }
 
 // function closeModal(){
