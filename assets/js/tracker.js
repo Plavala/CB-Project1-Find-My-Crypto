@@ -42,7 +42,7 @@ function printCoinInfo (name, date, number, price) {
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
     let deleteInvestmentBtn = $('<button>').addClass('delete-coin-btn');
-    
+
     deleteInvestmentBtn.text('Remove');
 
     portfolioDisplay.append(portfolioRowEl);
@@ -68,7 +68,6 @@ function calculateTotalInvestment (number, price){
 }
 
 function handleDeleteCoin(event) {
-  console.log(event.target);
   var btnClicked = $(event.target);
   btnClicked.parent('tr').remove();
 }
@@ -86,7 +85,7 @@ function handlePortfolioFormSubmit(event) {
 }
 
     formSubmitEl.on('click', handlePortfolioFormSubmit);
-    portfolioDisplay.on('click', '.close-button', handleDeleteCoin);
+    portfolioDisplay.on('click', '.delete-coin-btn', handleDeleteCoin);
 
 
 
