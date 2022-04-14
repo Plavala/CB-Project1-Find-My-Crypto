@@ -27,52 +27,31 @@ function printCoinInfo (name, date, number, price) {
 
     let portfolioRowEl = $('<tr>');
 
-    // let coinName = data[i].name.val();
-    // console.log(coinName);
-
-    // let coinOptionsTdEl =  $('<td>').text(coinOptions.value);
-
-    // $( '.coin-name-input' ).prepend( `<p>${coinOptions}</p>` );
+    let coinNameTdEl =  $('<td>').text(name);
 
     let coinDateTdEl = $('<td>').text(date);
 
-    // $( ".coin-date-input" ).prepend( `<p>${date}</p>` );
-
     let coinNumberTdEl = $('<td>').text(number);
-
-    // $( ".coin-number-input" ).prepend( `<p>${number}</p>` );
 
     let coinPriceTdEl = $('<td>').text('$' + price);
 
-    // $( ".coin-price-input" ).prepend( `<p>${price}</p>` );
-
     let totalInvestment = calculateTotalInvestment(number, price);
-
-    // $( ".coin-investment-input" ).prepend( `<p>$${totalInvestment}</p>` );
 
     var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
 
     let deleteInvestmentBtn = $('<button>').text('X');
 
-    // $('button').addClass('close-button');
-
-    // $( ".delete-investment" ).prepend(deleteInvestmentBtn);
-    // let removeBtn = document.createElement('input');
-    // removeBtn.type = 'button';
-    // removeBtn.className = 'close-button';
-    // btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
-    // deleteInvestmentBtn.prepend(removeBtn);
-
     portfolioDisplay.append(portfolioRowEl);
 
     portfolioRowEl.append(
-        // coinNameTdEl, 
+        coinNameTdEl, 
         coinDateTdEl, 
         coinNumberTdEl,
         coinPriceTdEl,
         totalInvestmentTdEl,
-     
+        deleteInvestmentBtn
     );
+
 
     // portfolioDisplay.append(portfolioRowEl);
     // modalEl.removeAttr('data-reveal');
@@ -101,7 +80,7 @@ function handleDeleteCoin(event) {
 
 function handlePortfolioFormSubmit(event) {
     event.preventDefault();
-    let coinName = coinNameInputEl.val();
+    let coinName = coinNameInputEl.val().trim();
     console.log();
     let coinDate = coinDateInputEl.val();
     let coinPrice = coinNumberInputEl.val().trim();
