@@ -1,6 +1,5 @@
 // DOM Elements 
 
-let rootElement = $(document.documentElement);
 let modalOpenerEl = $('#modal-opener');
 let portfolioDisplay = $('#portfolio-row-input');
 let modalEl = $('#example-modal');
@@ -14,6 +13,10 @@ let coinPriceInputEl = $('#coin-price');
 let coinInvestmentOutputEl = $('#coin-investment');
 let closeModalEl = $('#close-modal');
 
+const coinInfo = [];
+
+
+
 // Prevents default behavior on the main form 
 $ (document).foundation();
 
@@ -22,6 +25,8 @@ function openModal(event){
 }
 
 modalOpenerEl.on('click', openModal);
+
+getStorage();
 
 //Dynamically create coin info
 
@@ -80,7 +85,6 @@ function handlePortfolioFormSubmit(event) {
     let coinName = coinNameInputEl.val().trim();
     let coinDate = coinDateInputEl.val();
     let coinPrice = coinPriceInputEl.val();
-    typeof(coinPrice);
     let coinNumber = coinNumberInputEl.val();
   
     printCoinInfo(coinName, coinDate, coinNumber, coinPrice);
@@ -92,9 +96,10 @@ function handlePortfolioFormSubmit(event) {
       number: coinNumber
     };
 
-    localStorage.setItem('coin-info', JSON.stringify(data));
+    coinInfo.push(data);
 
-  
+    localStorage.setItem('coin-info', JSON.stringify(coinInfo));
+
     portfolioFormEl[0].reset();
 }
 
@@ -114,7 +119,6 @@ function handlePortfolioFormSubmit(event) {
             return response.json();
           })
           .then(function (data) {
-            console.log(data);
             for(let i = 0; i < data.length; i++) {
                 let coinOptions = document.createElement("option");
                     coinOptions.value = data[i].name;
@@ -126,3 +130,48 @@ function handlePortfolioFormSubmit(event) {
     getApi();
     
 
+    function getStorage() {
+        let data = localStorage.getItem('coin-info');
+        if(data){
+            const newData = JSON.parse(data);
+
+            for(let i = 0; i < newData.length; i++){
+                console.log(newData[i].name);
+                
+                let portfolioRowEl = $('<tr>');
+
+                let coinNameTdEl =  $('<td>').text(newData[i].name);
+
+                let coinDateTdEl = $('<td>').text(newData[i].date);
+
+                let coinNumberTdEl = $('<td>').text(newData[i].number);
+
+                let coinPriceTdEl = $('<td>').text('$' + newData[i].price);
+
+                let totalInvestment = calculateTotalInvestment(newData[i].number, newData[i].price);
+
+                var totalInvestmentTdEl = $('<td>').text('$' + totalInvestment);
+
+                let deleteInvestmentBtn = $('<button>').addClass('delete-coin-btn');
+
+                deleteInvestmentBtn.text('Remove');
+
+                portfolioDisplay.append(portfolioRowEl);
+
+                portfolioRowEl.append(
+                    coinNameTdEl, 
+                    coinDateTdEl, 
+                    coinNumberTdEl,
+                    coinPriceTdEl,
+                    totalInvestmentTdEl,
+                    deleteInvestmentBtn
+                );
+
+            }
+        
+        }
+    }
+        
+        
+
+   
