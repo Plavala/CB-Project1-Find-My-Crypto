@@ -26,6 +26,8 @@ function openModal(event){
 
 modalOpenerEl.on('click', openModal);
 
+// Call Local Storage function 
+
 getStorage();
 
 //Dynamically create coin info
@@ -129,7 +131,7 @@ function handlePortfolioFormSubmit(event) {
 
     getApi();
     
-
+//Get Local Storage Function
     function getStorage() {
         let data = localStorage.getItem('coin-info');
         if(data){
