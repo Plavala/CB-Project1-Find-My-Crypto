@@ -1,5 +1,5 @@
 # CB-1st-Project
-first project in the coding boot camp.
+First project in the coding boot camp.
 ## Description
 This is our first group project! We have been tasked to use our newly acquired skills with HTML, CSS, Javascript, and web API’s to build a web application from scratch. With our team we will conceive and execute a design that solves real-world problems by integrating data received from multiple server-side API requests. We will write your own user stories and acceptance criteria in GitHub Issues to help our team stay on track with the project. Using GitHub Project as a means to track the status of your project tasks will help us understand the benefits of Kanban boards.
 Because we will be working collaboratively, we will learn agile development methodologies and implement feature and bug fixes using git branch workflow and pull requests.
@@ -52,7 +52,7 @@ The following topics will be covered in this unit:
  
 ## Learning Objectives
  
-WE will be employer-ready if you are able to:
+We will be employer-ready if you are able to:
  
 * Speak technically about a feature we implemented in your project
  
