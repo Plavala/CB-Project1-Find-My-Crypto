@@ -67,7 +67,7 @@ h2 {
 
 p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(162, 224, 147);
+    color: rgb(12, 11, 11)
 }
 
 ul {
@@ -108,8 +108,9 @@ a {
  
 .Name-Change-Row {
   text-align: right;
+
+}
 .footer h3 {
     font-size: 20px;
     color: rgb(161, 87, 87);
-
 }
