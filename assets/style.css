@@ -3,7 +3,10 @@
     box-sizing: border-box;
 }
 
-
+.crypto-market {
+    display: table;
+    width: 100%
+}
 
 .market-card {
     flex-wrap: nowrap;
@@ -13,13 +16,41 @@
 .cryptoCard {
     background-color: green;
     width: 200px;
-    justify-self: stretch;
+    justify-content: space-between;
 }
 
 .cryptoCard img {
-    max-width: 2rem;
-    max-height: 2rem 
+    max-width: 1rem;
+    max-height: 1rem 
 }
 
 
+.marketCard-row {
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+.marketimg {
+    text-align: left;
+}
+
+.pricechanges {
+    text-align: right;
+}
+
+#marketMovers {
+    display: table;
+    flex-direction: column;
+    width: 25%;
+   
+}
+
+.marketMoverCard {
+    display: table;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
