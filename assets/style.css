@@ -90,6 +90,31 @@ p {
 }
 
 /*Right middle site content*/
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #092b0b;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(162, 224, 147);
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #312710;
+}
+
+a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(32, 32, 85);
+    font-weight: 1000;
+}
+
 .info-content {
     margin-bottom: 20px;
     padding: 50px;
@@ -149,6 +174,7 @@ p {
     color: #ffffff;
 }
 
-.footer h2 {
+.footer h3 {
     font-size: 20px;
+    color: rgb(161, 87, 87);
 }
