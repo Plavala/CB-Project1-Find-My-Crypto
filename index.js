@@ -5,7 +5,7 @@ var cryptoImg = document.querySelector('.market-image')
 
 
 function getNewsFeed(){
-    var API = 'pub_63593b2385ad8c49c191c6dbb0bff2d7c9a8'
+    var API = 'pub_6564a8de945ecfdede692ae310d76be02db2'
     var url = 'https://newsdata.io/api/1/news?apikey=' + API + '&q=crypto&country=us&language=en'
 
     fetch(url)
@@ -46,7 +46,7 @@ function getNewsFeed(){
             hyperlink.appendChild(title, mediaObjectDiv, mediaObjectSection)
             mediaSection.appendChild(mediaObjectDiv)
             mediaObjectDiv.append(mediaObjectSection)
-            mediaObjectSection.appendChild(thumbnailDiv)
+            
             
             mediaObjectDiv.append(mainMedia)
             mainMedia.append(content)
@@ -156,9 +156,9 @@ function getExchangeFeed() {
           var name = document.createElement('p');
           name.textContent = data[j].name;
           var currentPrice = document.createElement('p');
-          currentPrice.textContent = data[j].current_price;
+          currentPrice.textContent = '$' + data[j].current_price;
           var priceChange = document.createElement('p');
-          priceChange.textContent = data[j].price_change_24h;
+          priceChange.textContent = '$' + data[j].price_change_24h;
           var percentageChange = document.createElement('p');
           percentageChange.textContent = '(' + data[j].price_change_percentage_24h + ')' + '%';
          
