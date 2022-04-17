@@ -21,6 +21,7 @@ const getCryptoData = async () => {
     });
 };
 
+
 function takeInput() {
   getCryptoData();
 }
