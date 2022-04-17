@@ -1,25 +1,32 @@
-const getBtcData = async () => {
-  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DASH,DOGE&tsyms=USD")
+var mainCon = document.getElementById("container");
+
+const getCryptoData = async () => {
+  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,DOGE,XRP,SHIB&tsyms=USD")
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
-      document.getElementById("current").innerHTML = "Current BTC price: $" + data.USD + " USD";
-      return (price = data.USD);
+      for (const key in data) {
+        console.log(key, data[key].USD);
+        var tag = document.createElement("p");
+        tag.setAttribute("id", "p");
+        tag.innerHTML = `Current ${key} price: $` + data[key].USD;
+        mainCon.appendChild(tag);
+        var amount = document.getElementById("usd").value;
+        var convertedPrice = amount / data[key].USD;
+        tag = document.createElement("p");
+        tag.setAttribute("id", "p");
+        tag.innerHTML = "You can buy " + convertedPrice + " share of " + key;
+        mainCon.appendChild(tag);
+        console.log(convertedPrice);
+      }
     });
 };
 
-getBtcData();
-tcount = setInterval(function () {
-  tcount++;
-  if (tcount == 10) {
-    getBtcData();
-    tcount = 0;
-  }
-}, 1000);
 
 function takeInput() {
-  var amount = document.getElementById("usd").value;
-  var convertedPrice = amount / price;
-  // console.log(convertedPrice);
-  document.getElementById("bitcoin").innerHTML = "$" + amount + " is equal to " + convertedPrice + " in Bitcoin";
+  getCryptoData();
+}
+
+function clearAll() {
+  $("p").empty();
+  document.getElementById("usd").value = "";
 }
