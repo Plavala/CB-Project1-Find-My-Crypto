@@ -15,7 +15,7 @@ function getNewsFeed(){
       .then(function(data){
         console.log(data)
 
-          for(var i = 0; i < 10;i++){
+          for(var i = 0; i < 7;i++){
             console.log(data.results)
             var hyperlink = document.createElement('a')
             var hyperlinkUrl = data.results[i].link
