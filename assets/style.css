@@ -145,7 +145,7 @@ a {
 
 
 .footer-distributed{
-	background: #666;
+	background: #0A1243;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -176,7 +176,7 @@ a {
 }
 
 .footer-distributed h3 span{
-	color:  lightseagreen;
+	color:  #1536BC;
 }
 
 /* Footer links */
@@ -196,7 +196,7 @@ a {
 }
 
 .footer-distributed .footer-company-name{
-	color:  #222;
+	color:  #1536BC;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -242,7 +242,7 @@ a {
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
+	color: #ffffff;	
 	text-decoration: none;;
 }
 
