@@ -3,6 +3,25 @@
     box-sizing: border-box;
 }
 
+.subnav-hero-section {
+    text-align: center;
+    /* background: #1779ba; */
+    background-image: url('./images/bitcoin-image.jpeg');
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 300px;
+  }
+
 .crypto-market {
     position: relative;
     display: table;
@@ -91,6 +110,10 @@ a {
     min-height: 300px;
     background-color: #836609;
     color: #ffffff;
+}
+#marketMovers {
+    margin-top: 30px;
+    justify-content: space-between;
 }
 
 
