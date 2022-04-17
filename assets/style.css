@@ -22,6 +22,7 @@
     height: 300px;
   }
 
+
 .crypto-market {
     position: relative;
     display: table;
@@ -67,7 +68,7 @@
     text-decoration: none;
 }
 
-<<<<<<< HEAD
+
 p {
     font-size: 16px;
 }
@@ -79,30 +80,63 @@ p {
     margin-bottom: 25px;
     object-fit: cover;
 
+
+
+.crypto-market {
+    position: relative;
+    display: table;
+    width: 100%
 }
 
-/*Left side content*/
-.left-feed {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    clear: both;
-    float: left;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #1d440b;
+.market-card {
+    flex-wrap: nowrap;
+    margin-top: 20px;
 }
-.left-feed {
-    padding-left: 20px;
-    margin-bottom: 32px;
-    color: #ffffff;
+
+.cryptoCard {
+    background-color: green;
+    width: 200px;
+    justify-content: space-between;
 }
+
+.cryptoCard img {
+    max-width: 1rem;
+    max-height: 1rem 
+}
+
+
+.marketCard-row {
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marketimg {
+    text-align: left;
+}
+
+.pricechanges {
+    text-align: right;
+
+}
+
+.hyperlink h4{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .left-feed h3 {
     margin-bottom: 10px;
-=======
+
 .marketMoverCard h3{
->>>>>>> a21226e5db14aa1632364647bd7d57a06357a427
+
+
+
+.marketMoverCard h3{
+
     text-align: center;
 }
 
@@ -171,10 +205,13 @@ a {
 .footer h3 {
     font-size: 20px;
     color: rgb(161, 87, 87);
-<<<<<<< HEAD
+
+
 }
 
 
-=======
+
 }
->>>>>>> a21226e5db14aa1632364647bd7d57a06357a427
+
+}
+
