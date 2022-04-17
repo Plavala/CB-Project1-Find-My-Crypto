@@ -6,7 +6,7 @@ const getCryptoData = async () => {
     .then((response) => response.json())
     .then((data) => {
       for (const key in data) {
-        console.log(key, data[key].USD);
+        // console.log(key, data[key].USD);
         var tag = document.createElement("p");
         tag.setAttribute("id", "p");
         tag.innerHTML = `Current ${key} price: $` + data[key].USD;
