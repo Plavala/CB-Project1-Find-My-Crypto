@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/tracker.css">
     <link rel="stylesheet" href="assets\style.css">
     <title> FindMyCrypto</title>
 </head>
-<!--please work-->
-<!-- header -->
+
 <body>
+<!-- header -->
   <header class="subnav-hero-section">
-    <h1 id = 'tracker' class="subnav-hero-headline">Find My Crypto</h1>
+    <h1 id = 'tracker' class="subnav-hero-headline">FindMyCrypto</h1>
     <ul class="subnav-hero-subnav">
+        <li><a href="timeline.html">About Crypto</a></li>
         <li><a href="tracker.html" class="is-active">Crypto Tracker</a></li>
         <li><a href="#" href="#">Crypto Calculator</a></li>
     </ul>
@@ -22,23 +24,7 @@
     <!-- top movers -->
     <div class="grid-container crypto-market">
       <div class = 'market-card grid-x grid-margin-x small-up-2 medium-up-5 '></div>
-
     </div>
-
-    <div class="Prof">
-        <img src="assets\images\cryptocurrency.jpg" alt="Crypto background">
-    </div>
-    <div class="information-container">
-        <!--site left side Crypto feed-->
-        <div class="left-feed">
-            <div class="left-feed">
-                <h3>Crypto feed</h3>
-                <img src="assets\images\ri44m7ijul071.webp" alt="crypto feed placeholder" />
-
-            </div>
-
-    </div>
-
 
     <!-- market Movers -->
     <div id = 'marketMovers' class = 'marketMovers-container grid-x grid-margin-x small-up-2 medium-up-2' data-test = 'marketMoversPlus'>
@@ -52,100 +38,69 @@
 
         <div class = "media-section small-9 columns"> </div>
     </div> 
-  </div>
-      
-    </div>
 
-    
+    <!-- footer  -->
 
-    
+    <footer class="footer-distributed">
 
-    <script src="./index.js"></script>
-</body>
+        <div class="footer-left">
 
+            <h3>FindMy<span>Crypto</span></h3>
 
-        <!--The link content-->
-        <div class="info">
-            <div id="About-crypto" class="info-content">
-                <img src="assets\images\cryptocurrency-concept-background.webp" alt="Crypto background" class="float-left" />
-                <h2>About crypto</h2>
-                <p>
-
-
-                    What is Crypto? 
-                    <ul>Cryptocurrency is a digital payment system that doesn't rely on banks to verify transactions. It's a peer-to-peer system that can enable anyone anywhere to send and receive payments. Instead of being physical money carried around and exchanged in the real world, cryptocurrency payments exist purely as digital entries to an online database describing specific transactions. When you transfer cryptocurrency funds, the transactions are recorded in a public ledger. Cryptocurrency is stored in digital wallets.
-
-                    </ul>
-                </p>
-                <p>
-                    Types of Cryptop
-                    <ul>
-                        Few Eample's: 
-                        <li>
-                            Bitcoin (BTC) <a href='https://www.investopedia.com/terms/b/bitcoin.asp'>Info..</a>
-                        </li>
-                        <li>
-                            Ethereum (ETH) <a href='https://www.investopedia.com/terms/e/ethereum.asp#:~:text=Ethereum%20is%20a%20platform%20powered,enables%20ETH%20to%20accrue%20value.'>Info..</a>
-                        </li>
-                        <li>
-                            Tether (USDT) <a href='https://www.investopedia.com/terms/t/tether-usdt.asp#:~:text=Tether%20(USDT)%20is%20a%20blockchain,price%20pegged%20to%20USD%20%241.00.'>Info..</a>
-                        </li>
-                        <li>
-                            Dogecoin (DOGE) <a href='https://www.investopedia.com/terms/d/dogecoin.asp#:~:text=Dogecoin%20(DOGE)%20is%20a%20peer,Dogecoin's%20blockchain%20still%20has%20merit.'>Info..</a>
-                        </li>
-                    </ul>
-
-                </p>
-            </div>
-            <div id="My-crypto-tracker" class="info-content">
-                <img src="assets\images\crypto-exchange.jpg" alt="guy holding crypto" class="float-right" />
-                <h2>My Crypto Tracker</h2>
-                <p>
-                </p>
-            </div>
-            <div id="Crypto-converter" class="info-content">
-                <img src="assets\images\97-060-ARGO-PRO-8888-Private-Equity-Blog-From-Scott-Kelly-Content-Hub-Image-1200x675-resized-1024x576.jpg" alt="coins" class="float-left" />
-                <h2>Crypto converter</h2>
-                <p>
-
-
-
-                    With this link you 'll reach our crypto converter which will allow you to try out and check out different cryotpos and their output depending on desired input such as how much you are willing to invest. 
-
-
-                    With this link you 'll reach our crypto converter which will allow you to try out and check out different cryotpos and their output depending on desired input such as how much you are willing to invest. 
-
-
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <!--Footer site credits and copy right -->
-
-    <div class="footer">
-        <h2>Made with VScode by Microsoft</h2>
-        <p>
-            &copy; Georgia tech coding bootcamp
-        </p>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="./assets/js/convert.js"></script>
-</body>
-
-         <div class="footer">
-            <h3>Customer Support</h3>
-            <p>
-            E-mail: Oscar.cdbs@gmail.com
-            <ul>
-                Phone: 678-360-8508
-            </ul>
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="tracker.html">Crypto Tracker</a>
+            
+                <a href="#">Crypto Calculator</a>
+                
+                <a href="mailto:support@company.com">Contact</a>
             </p>
-     </div> 
-     </body>
 
+            <p class="footer-company-name">FindMyCrypto © 2022</p>
+        </div>
 
+        <div class="footer-center">
 
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>123 Anywhere Street</span> Anyplace, Georgia</p>
+            </div>
 
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About FindMyCrypto</span>
+                 This site was created to help the average crypto user find out general information on various cryptocurrency, while also giving them the chance to keep track of their crypto portfolio. Have fun!
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Plavala/CB-Project1-Find-My-Crypto"><i class="fa-brands fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+      
+      
+    <script src="./index.js"></script>
+
+</body>
 </html>
