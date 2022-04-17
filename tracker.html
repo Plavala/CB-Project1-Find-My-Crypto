@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Crypto Tracker</title>
+    <link rel="stylesheet" href="./assets/tracker.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <!-- Top of the page --> 
+    <header class="subnav-hero-section">
+        <h1 id = 'tracker' class="subnav-hero-headline">My Crypto Tracker</h1>
+        <ul class="subnav-hero-subnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="is-active">Crypto Calculator</a></li>
+            <li><a target="_blank" href="#">Contact Us</a></li>
+        </ul>
+    </header>
+  
+
+    <!-- Disabled Form  -->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-2">
+                <form>
+                    <div class="columns cell small-2">
+                        <label>Coin
+                            <select disabled><option></option></select>
+                        </label>
+                    </div>
+                    <div class="columns cell small-2">
+                        <label>Date Purchased
+                            <input type="date" disabled>
+                        </label>
+                    </div>
+                    <div class="columns cell small-2">
+                        <label># of Coins
+                            <input type="number" placeholder="100" disabled>
+                        </label>
+                    </div>
+                    <div class="columns cell small-2">
+                        <label>Purchased Price
+                            <input type="number" placeholder="$100" disabled>
+                        </label>
+                    </div>
+                    <div class="columns cell small-2">
+                        <label>Total Investment
+                            <input type="number" placeholder="Total Investment" disabled>
+                        </label>
+                        <p><button class="button" data-open="example-modal" id="modal-opener">Click To Add Your
+                                Crypto!</button></p>
+                    </div>
+                </form>
+            </div>
+        <!-- Table Data -->
+            <div class="cell large-10">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50">Coin</th>
+                            <th width="50">Date Purchased</th>
+                            <th width="50"># Of Coins</th>
+                            <th width="50">Purchased Price</th>
+                            <th width="50">Total Investment</th>
+                            <th width="50">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="portfolio-row-input"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Version of Form -->
+    <div class="reveal" id="example-modal" data-reveal>
+        <form id="portfolio-form">
+            <div class="grid-container">
+                <h3>Please Enter The Information For Your Crypto Portfolio</h3>
+                <div class="row column grid-y grid-x align-center">
+                    <div class="columns">
+                        <label>Coin
+                            <select id="coin-list"><option id="coin-value" value="coin"></option></select>
+                        </label>
+                    </div>
+                    <div class="columns">
+                        <label>Date Purchased
+                            <input id="coin-date" type="date" placeholder="Coin">
+                        </label>
+                    </div>
+                    <div class="columns">
+                        <label># of Coins
+                            <input id="coin-number" type="number" placeholder="100">
+                        </label>
+                    </div>
+                    <div class="columns">
+                        <label>Purchased Price
+                            <input id="coin-price" type="number" placeholder="$100">
+                        </label>
+                    </div>
+                    <div class="columns">
+                        <label>Total Investment
+                            <input id="coin-investment" type="number" placeholder="Total Investment" disabled>
+                        </label><button id="crypto-submit" class="button" type="submit" data-display="cryptoSubmission">Click To Add Your Crypto!</button></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id ='close-modal' class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"         
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/tracker.js"></script>
+</body>
+
+</html>
