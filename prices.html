@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/prices.css">
+    <link rel="stylesheet" href="./assets/prices.css" />
     <title>Prices</title>
   </head>
   <body>
-    <div class="calculator">
-      <input type="number" name="btc" class="currencyField" placeholder="BTC" />
-      <div class="arrow" style="margin: 0 10px" ;>=</div>
-      <input type="number" name="usd" class="currencyField" placeholder="USD" />
-    </div>
+<div id="container">
+  <h1>Crypto Converter</h1>
+<p id="current"></p>
+    <!-- <p id="infotime"></p> -->
+    <p>Enter dollar amount that you wish to invest in buying Bitcoin:</p>
+      <label for="usd">Enter USD amount: </label>
+      <input type="text" id="usd" name="usd" />
+      <input type="submit" onclick="takeInput()" />
+      <p id="bitcoin"></p>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</div>
+
+
+
     <script src="./assets/js/convert.js"></script>
   </body>
 </html>

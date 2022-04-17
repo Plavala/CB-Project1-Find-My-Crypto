@@ -1,22 +1,25 @@
+const getBtcData = async () => {
+  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DASH,DOGE&tsyms=USD")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+      document.getElementById("current").innerHTML = "Current BTC price: $" + data.USD + " USD";
+      return (price = data.USD);
+    });
+};
 
-$(".currencyField").keyup(function () {
-
-  let convFrom;
-  if ($(this).prop("name") == "btc") {
-    convFrom = "btc";
-    convTo = "usd";
-  } else {
-    convFrom = "usd";
-    convTo = "btc";
+getBtcData();
+tcount = setInterval(function () {
+  tcount++;
+  if (tcount == 10) {
+    getBtcData();
+    tcount = 0;
   }
-  $.getJSON("https://api.coingecko.com/api/v3/simple/price?ids=BTC&vs_currencies=USD",
-    function (data) {
-      var origAmount = parseFloat($("input[name='" + convFrom + "']").val());
-      var exchangeRate = parseInt(data.bpi.USD.rate_float);
-      let amount;
-      if (convFrom == "btc") amount = parseFloat(origAmount * exchangeRate);
-      else amount = parseFloat(origAmount / exchangeRate);
-      $("input[name='" + convTo + "']").val(amount.toFixed(2));
-    }
-  );
-});
+}, 1000);
+
+function takeInput() {
+  var amount = document.getElementById("usd").value;
+  var convertedPrice = amount / price;
+  // console.log(convertedPrice);
+  document.getElementById("bitcoin").innerHTML = "$" + amount + " is equal to " + convertedPrice + " in Bitcoin";
+}
