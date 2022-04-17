@@ -1,8 +1,7 @@
 var mainCon = document.getElementById("container");
 
 const getCryptoData = async () => {
-  fetch(
-    "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,DOGE,XRP,SHIB&tsyms=USD"
+  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,DOGE,XRP,SHIB&tsyms=USD"
   )
     .then((response) => response.json())
     .then((data) => {
