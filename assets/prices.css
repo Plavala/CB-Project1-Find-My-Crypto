@@ -1,0 +1,8 @@
+#container {
+  display: block;
+  background-color: rgb(194, 223, 220);
+  padding: 30px;
+  margin: 50px;
+  width: 50%;
+
+}

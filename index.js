@@ -5,7 +5,7 @@ var cryptoImg = document.querySelector('.market-image')
 
 
 function getNewsFeed(){
-    var API = 'pub_6564a8de945ecfdede692ae310d76be02db2'
+    var API = 'pub_660056a0fc050b1ab3ee6f7bdadc0be34c34'
     var url = 'https://newsdata.io/api/1/news?apikey=' + API + '&q=crypto&country=us&language=en'
 
     fetch(url)
@@ -15,7 +15,11 @@ function getNewsFeed(){
       .then(function(data){
         console.log(data)
 
+
           for(var i = 0; i < 6;i++){
+
+          for(var i = 1; i < 6;i++){
+
             console.log(data.results)
             var hyperlink = document.createElement('a')
             var hyperlinkUrl = data.results[i].link
@@ -50,15 +54,20 @@ function getNewsFeed(){
             
             mediaObjectDiv.append(mainMedia)
             mainMedia.append(content)
-            //mainMedia.appendChild()
-
-
-            
-            
-            
-          
+            //mainMedia.appendChild
+          }
+          for(var j = 0; j < 10; j++) {
+            var title = document.querySelector('.title')
+            var description = document.querySelector('.article-elipsis')
+            var readMore = document.querySelector('.read-more')
+            var readMoreUrl = data.results[j].link
+            readMore.setAttribute('href', readMoreUrl)
+  
+            title.textContent = data.results[j].title
+            description.textContent = data.results[j].description
             
           }
+        }
       })
 }
 getNewsFeed()
@@ -153,29 +162,21 @@ function getExchangeFeed() {
 
           var symbol = document.createElement('h5');
           symbol.textContent = data[j].symbol;
-          var name = document.createElement('p');
+          var name = document.createElement('h6');
           name.textContent = data[j].name;
           var currentPrice = document.createElement('p');
-          currentPrice.textContent = '$' + data[j].current_price;
-          var priceChange = document.createElement('p');
-          priceChange.textContent = '$' + data[j].price_change_24h;
+          currentPrice.textContent = '$' + data[j].current_price.toFixed(3);
           var percentageChange = document.createElement('p');
-          percentageChange.textContent = '(' + data[j].price_change_percentage_24h + ')' + '%';
+          percentageChange.textContent = '$' + data[j].price_change_24h.toFixed(3) + '(' + data[j].price_change_percentage_24h + ')' + '%';
          
           
           cardSection.append(row);
           row.append(symbolandpriceRow, nameandchangeRow);
           symbolandpriceRow.append(symbol, currentPrice);
-          nameandchangeRow.append(name, priceChange, percentageChange);
-
-
-
-
-          
-
-
+          nameandchangeRow.append(name, percentageChange);
           
         }
+     
         })
 
 }
