@@ -1,0 +1,198 @@
+
+
+/* Header CSS  */
+
+.subnav-hero-section {
+    text-align: center;
+    /* background: #1779ba; */
+    background-image: url('./images/bitcoin-image.jpeg');
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 300px;
+  }
+  
+  .subnav-hero-section .subnav-hero-headline {
+    color: #fefefe;
+  }
+  
+  .subnav-hero-subnav {
+    float: none;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .subnav-hero-subnav li {
+    float: none;
+    display: inline-block;
+  }
+  
+  .subnav-hero-subnav li a {
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    color: #fefefe;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.35s ease-in-out;
+  }
+  
+  .subnav-hero-subnav li a.is-active {
+    background: rgba(254, 254, 254, 0.15);
+  }
+  
+  .subnav-hero-subnav li a:hover {
+    background: rgba(254, 254, 254, 0.15);
+  }
+
+
+/* Timeline CSS  */
+
+
+.timeline .timeline-item::after, .timeline .timeline-item::before {
+
+    clear: both;
+    content: '';
+    display: block;
+    width: 100%;
+  }
+
+
+  .timeline {
+    background-color: #1536BC; 
+    padding: 0 10px;
+    position: relative;
+    transition: all 0.25s ease-in;
+    width: 100%;
+  }
+  
+  .timeline::before {
+    background: #fefefe;
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+  
+  .timeline::after {
+    clear: both;
+    content: '';
+    display: table;
+    width: 100%;
+  }
+  
+  .timeline a {
+    color: #fefefe;
+    font-weight: bold;
+    transition: all 0.25s ease-in;
+  }
+  
+  .timeline a:hover {
+    box-shadow: 0 1px 0px 0px #fefefe;
+    transition: all 0.25s ease-in;
+  }
+  
+  .timeline .timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .timeline .timeline-item .timeline-icon {
+    background: #fefefe;
+    border-radius: 50%;
+    height: 50px;
+    left: 50%;
+    margin-left: -23px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+  
+  .timeline .timeline-item .timeline-icon img,
+  .timeline .timeline-item .timeline-icon svg {
+    left: 14px;
+    position: relative;
+    top: 11px;
+  }
+  
+  .timeline .timeline-item .timeline-icon svg {
+    top: 14px;
+  }
+  
+  .timeline .timeline-item .timeline-content {
+    padding: 20px;
+    text-align: right;
+    transition: all 0.25s ease-in;
+    width: 45%;
+    background: transparent;
+  }
+  
+  .timeline .timeline-item .timeline-content p {
+    color: #fefefe;
+  }
+  
+  .timeline .timeline-item .timeline-content p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  
+  .timeline .timeline-item .timeline-content .timeline-content-date {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .timeline .timeline-item .timeline-content .timeline-content-month {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  .timeline .timeline-item .timeline-content.right {
+    float: right;
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .timeline {
+      margin: 30px;
+      padding: 0;
+      width: 90%;
+    }
+    .timeline::before {
+      left: 0;
+    }
+    .timeline .timeline-item .timeline-content {
+      float: right;
+      text-align: left;
+      width: 90%;
+    }
+    .timeline .timeline-item .timeline-content::before, .timeline .timeline-item .timeline-content.right::before {
+      border-left: 0;
+      border-right: 7px solid #fefefe;
+      left: 10%;
+      margin-left: -6px;
+    }
+    .timeline .timeline-item .timeline-icon {
+      left: 0;
+    }
+  }
+  
+  

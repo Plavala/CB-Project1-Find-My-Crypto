@@ -1,7 +1,15 @@
-*
-/*full site background*/ {
+* {
     box-sizing: border-box;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
 
 .subnav-hero-section {
     text-align: center;
@@ -22,44 +30,74 @@
     height: 300px;
   }
 
+
+/* feature article link */
+
+.feature-article{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.feature-article .title{
+    color: black;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.feature-article .title:hover {
+    color:  rgb(10, 10, 109);
+}
+.newsimg {
+    width: 100rem;
+    height: 30rem;
+    margin-right: 5rem;
+}
+
+
+  
+  
+
+
+/* crypto market top movers */
+
+
+
 .crypto-market {
     position: relative;
     display: table;
-    width: 100%
+    width: 0%;
+    padding: 0%;
 }
 
 .market-card {
+    display: flex;
     flex-wrap: nowrap;
-    margin-top: 20px;
+    margin-top: 4rem;
+    justify-self: stretch;
+    justify-content: space-evenly;
+}
+
+
+
+
+.market-card h6 {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .cryptoCard {
-    background-color: green;
-    width: 200px;
+    display: flex;
+    justify-self: stretch;
     justify-content: space-between;
 }
 
-.cryptoCard img {
-    max-width: 1rem;
-    max-height: 1rem 
-}
 
 
-.marketCard-row {
-   display: flex;
-   align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.marketimg {
-    text-align: left;
-}
-
-.pricechanges {
-    text-align: right;
-}
 
 .hyperlink h4{
     color: black;
@@ -67,7 +105,7 @@
     text-decoration: none;
 }
 
-<<<<<<< HEAD
+
 p {
     font-size: 16px;
 }
@@ -78,103 +116,297 @@ p {
     width: 100%;
     margin-bottom: 25px;
     object-fit: cover;
-
 }
 
-/*Left side content*/
-.left-feed {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    clear: both;
-    float: left;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    background-color: #1d440b;
+
+.crypto-market {
+    position: relative;
+    display: table;
+    width: 100%
 }
-.left-feed {
-    padding-left: 20px;
-    margin-bottom: 32px;
-    color: #ffffff;
+
+
+
+.cryptoCard img {
+    max-width: 2rem;
+    max-height: 2rem 
 }
+
+
+.marketCard-row {
+   display: flex;
+   flex-direction: row;
+ justify-content: space-between;
+ margin-left: 5px; 
+ margin-right: 5px; 
+}
+
+.hyperlink h4{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .left-feed h3 {
     margin-bottom: 10px;
-=======
+}
+
+
 .marketMoverCard h3{
->>>>>>> a21226e5db14aa1632364647bd7d57a06357a427
+
     text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(10, 10, 109);;
+}
+
+.marketMoverCard {
+    border: none;
 }
 
 
-.left-feed img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
 
 /*Right middle site content*/
-h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #092b0b;
-}
 
-p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(12, 11, 11)
-}
-
-ul {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-li {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #312710;
-}
-
-a {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(32, 32, 85);
-    font-weight: 1000;
-}
-
-.info-content {
-    margin-bottom: 20px;
-    padding: 50px;
-    min-height: 300px;
-    background-color: #836609;
-    color: #ffffff;
-}
 #marketMovers {
     margin-top: 30px;
     justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
-
-.card-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.marketRow {
-    display: flex;
-    flex: row;
-    justify-content: space-between;
+.media-object {
+    border-bottom: solid;
+    border-color: grey;
 }
 
  
 .Name-Change-Row {
-  text-align: right;
-
-}
-.footer h3 {
-    font-size: 20px;
-    color: rgb(161, 87, 87);
-<<<<<<< HEAD
+ -webkit-box-pack: justify;
+  display: flex;
+  justify-content: space-between;
+  background-color:ivory;
 }
 
+.Name-Change-Row h6 {
 
-=======
+text-transform: uppercase;
+
 }
->>>>>>> a21226e5db14aa1632364647bd7d57a06357a427
+.SymbolandPricerow {
+    -webkit-box-pack: justify;
+    display: flex;
+    justify-content: space-between;
+
+}
+.SymbolandPricerow h5 {
+    text-align: left;
+    font-weight: 800;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.news {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: solid;
+    border-color: rgb(179, 179, 179);
+    margin-bottom: 2rem;
+    color: rgb(10, 10, 109);
+}
+
+
+/* Footer CSS  */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+
+.footer-distributed{
+	background: #0A1243;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #1536BC;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  #ffffff;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #1536BC;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color: #ffffff;	
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+
