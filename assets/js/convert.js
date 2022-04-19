@@ -7,13 +7,13 @@ const getCryptoData = async () => {
       for (const key in data) {
         console.log(key, data[key].USD);
         var tag = document.createElement("p");
-        tag.setAttribute("id", "p");
+        tag.setAttribute("class", "calc-info");
         tag.innerHTML = `Current ${key} price: $` + data[key].USD;
         mainCon.appendChild(tag);
         var amount = document.getElementById("usd").value;
         var convertedPrice = amount / data[key].USD;
         tag = document.createElement("p");
-        tag.setAttribute("id", "p");
+        tag.setAttribute("class", "calc-info");
         tag.innerHTML = "You can buy " + convertedPrice + " share of " + key;
         mainCon.appendChild(tag);
         console.log(convertedPrice);
@@ -27,6 +27,6 @@ function takeInput() {
 }
 
 function clearAll() {
-  $("p").empty();
+  $('.calc-info').empty();
   document.getElementById("usd").value = "";
 }

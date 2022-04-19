@@ -5,7 +5,7 @@ var cryptoImg = document.querySelector('.market-image')
 
 
 function getNewsFeed(){
-    var API = 'pub_660056a0fc050b1ab3ee6f7bdadc0be34c34'
+    var API = 'pub_63593b2385ad8c49c191c6dbb0bff2d7c9a8'
     var url = 'https://newsdata.io/api/1/news?apikey=' + API + '&q=crypto&country=us&language=en'
 
     fetch(url)
