@@ -5,7 +5,7 @@ var cryptoImg = document.querySelector('.market-image')
 
 
 function getNewsFeed(){
-    var API = 'pub_63593b2385ad8c49c191c6dbb0bff2d7c9a8'
+    var API = 'pub_666500b98e18885745dc366f7c4948dced61'
     var url = 'https://newsdata.io/api/1/news?apikey=' + API + '&q=crypto&country=us&language=en'
 
     fetch(url)
@@ -83,7 +83,9 @@ function getExchangeFeed() {
       })
 
       .then(function(data) {
-        for(var i = 0; i < 5; i++) {
+        for(var i = 0; i < 6; i++) {
+         
+          
           //Style for market Boxes at top of screen
           var marketCard = document.querySelector('.market-card');
           
@@ -117,13 +119,17 @@ function getExchangeFeed() {
           var img = document.createElement('img');
           img.setAttribute('src', imgUrl);
           img.classList = 'marketimg';
+
           var priceChange = document.createElement('p');
           priceChange.classLIST = 'pricechanges';
-          var pricePercentageChange = document.createElement('p');
+          
 
           var date = document.createElement('p');
 
           var imgUrl = data[i].image;
+          
+      
+          
           var currentPrice = data[i].current_price;
           var pChange = data[i].price_change_24h;
           var PercentageChange = data[i].price_change_percentage_24h;
