@@ -75,37 +75,28 @@ html, body {
 }
 
 .market-card {
+    display: flex;
     flex-wrap: nowrap;
     margin-top: 4rem;
-    
+    justify-self: stretch;
+    justify-content: space-evenly;
+}
 
-    
+
+
+
+.market-card h6 {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .cryptoCard {
-    background-color: green;
-    width: 200px;
-    
-}
-
-.cryptoCard img {
-    max-width: 1rem;
-    max-height: 1rem 
-}
-
-
-.marketCard-row {
-    -webkit-box-pack: justify;
     display: flex;
+    justify-self: stretch;
     justify-content: space-between;
 }
 
 
-.imgandpchange {
-    -webkit-box-pack: justify;
-    display: flex;
-    justify-content: space-between;
-}
 
 
 .hyperlink h4{
@@ -134,38 +125,20 @@ p {
     width: 100%
 }
 
-.market-card {
-    flex-wrap: nowrap;
-    margin-top: 20px;
-}
 
-.cryptoCard {
-    background-color: green;
-    width: 200px;
-    justify-content: space-between;
-}
 
 .cryptoCard img {
-    max-width: 1rem;
-    max-height: 1rem 
+    max-width: 2rem;
+    max-height: 2rem 
 }
 
 
 .marketCard-row {
    display: flex;
-   align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.marketimg {
-    text-align: left;
-}
-
-.pricechanges {
-    text-align: right;
-
+   flex-direction: row;
+ justify-content: space-between;
+ margin-left: 5px; 
+ margin-right: 5px; 
 }
 
 .hyperlink h4{
@@ -301,7 +274,7 @@ text-transform: uppercase;
 	line-height: 1.8;
   font-weight:400;
 	text-decoration: none;
-	color:  inherit;
+	color:  #ffffff;
 }
 
 .footer-distributed .footer-company-name{

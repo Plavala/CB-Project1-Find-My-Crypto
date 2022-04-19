@@ -64,6 +64,7 @@ function getNewsFeed(){
             readMore.setAttribute('href', readMoreUrl)
   
             title.textContent = data.results[j].title
+            title.setAttribute('href', readMoreUrl)
             description.textContent = data.results[j].description
             
           }
@@ -126,17 +127,22 @@ function getExchangeFeed() {
           var currentPrice = data[i].current_price;
           var pChange = data[i].price_change_24h;
           var PercentageChange = data[i].price_change_percentage_24h;
-
           
+
+          if(pChange <= 0) {
+            card.style.backgroundColor = 'red'
+          } else {
+            card.style.backgroundColor = 'green'
+          }
+
           name.textContent = data[i].name;
           price.textContent = '$ ' + currentPrice;
-          priceChange.textContent = '$' + Math.floor(pChange) + ' %' + PercentageChange;
-          date.textContent= data[i].last_updated;
-        
-
+          priceChange.textContent = '$' + pChange.toFixed(2) + '(%' + PercentageChange.toFixed(2) + ')';
+      
+          
           
           NandPRow.append(name, price);
-          imgAndPchange.append(img, priceChange, pricePercentageChange);
+          imgAndPchange.append(img, priceChange);
           dateRow.append(date);
 
 

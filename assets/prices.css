@@ -1,8 +1,36 @@
 #container {
-  display: block;
-  background-color: rgb(194, 223, 220);
-  padding: 30px;
-  margin: 50px;
+  
+  /* display: block; */
+  justify-self: center;
+  margin: auto;
   width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  border: none;
+  background-color: none;
 
 }
+
+#container h1{
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+ #container h4 {
+   text-align: center;
+   font-weight: 700;
+   
+ }
+
+ .converter-button {
+   border-radius: 5px;
+   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+   ;
+   color: white;
+ }
+ .converter-input{
+   border-radius: 10px;
+   margin-top: 3rem;
+ }
